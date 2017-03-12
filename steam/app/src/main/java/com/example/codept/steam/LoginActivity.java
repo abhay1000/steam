@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
     private static EditText uname;
-    private static EditText pass;
+    private static EditText password;
     private static Button btn;
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
     public void login()
     {
         uname = (EditText)findViewById(R.id.editText);
-        pass = (EditText)findViewById(R.id.editText6);
+        password = (EditText)findViewById(R.id.editText6);
 
         btn = (Button)findViewById(R.id.button3);
         btn.setOnClickListener(
@@ -27,7 +27,8 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v)
                     {
-                        if(uname.getText().toString().equals("admin") && pass.getText().toString().equals("admin"))
+                        if(uname.getText().toString().equals("admin") && password.getText().toString().equals("admin"))
+                        if(uname.getText().toString().equals("admin") && password.getText().toString().equals("admin"))
                         {
                             Toast.makeText(Login.this,"VALID CREDENTIALS",Toast.LENGTH_SHORT).show();
                         }
